@@ -2,35 +2,17 @@
 #include <stdio.h>
 
 /**
- * print_to_98 - prints all natural number from n to 98
- * @n: function parameter
- * Return: always 0
+ * add - functions that adds two integers
+ * @x: function parameter
+ * @y: function parameter
+ * Return: 0
  */
 
-void print_to_98(int n)
+int add(int, int)
 {
-	int i;
+	int x;
+	int y;
 
-	if (n >= 0 && n <= 98)
-	{
-		for (i = n ; i <= 98 ; i++)
-		{
-			printf("%d", i);
-			if (i != 98)
-				printf(", ");
-		}
-		printf("5\n");
-	}
-	else if (n > 98)
-	{
-		for (i = n ; i >= 98 ; i--)
-		{
-			printf("%d", i);
-			if (i != 98)
-				printf(", ");
-		}
-		printf("\n");
-	}
-	else if (n == 98)
-		printf("%d\n", n);
+	int result = x + y
+	return (result);
 }
