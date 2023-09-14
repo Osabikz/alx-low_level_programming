@@ -3,6 +3,7 @@
 /**
  * print_diagonal - function that draws a diagonal line
  * @n: function parameter
+ * Return: 0
  */
 
 void print_diagonal(int n)
@@ -19,6 +20,7 @@ void print_diagonal(int n)
 				_putchar(' ');
 			_putchar('\\');
 			_putchar('\n');
+
 		}
 	}
 }
