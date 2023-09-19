@@ -13,7 +13,7 @@ int main(void)
 
 	char c;
 
-	srand(time(NULL));
+	srand(time(0));
 	sum = 0;
 	while (sum <= 2645)
 	{
