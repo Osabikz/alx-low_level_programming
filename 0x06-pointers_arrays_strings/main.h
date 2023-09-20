@@ -1,5 +1,6 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
+#include <string.h>
 
 char *string_toupper(char *);
 int _putchar(char c);
