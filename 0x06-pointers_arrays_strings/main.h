@@ -2,6 +2,7 @@
 #define _MAIN_H_
 #include <string.h>
 
+char *leet(char *);
 char *string_toupper(char *);
 int _putchar(char c);
 char *_strcat(char *dest, char *src);
