@@ -25,7 +25,7 @@ int is_digit(char *s)
 /**
  * _strlen - returns the length of a string
  * @s: string parameter
- * Return: 0
+ * Return: length of the string
  */
 int _strlen(char *s)
 {
@@ -39,7 +39,7 @@ int _strlen(char *s)
 }
 
 /**
- * error - handles errors for main
+ * errors- handles errors for main
  */
 
 void errors(void)
@@ -78,7 +78,7 @@ int main(int argc, char *argv[])
 		for (len2 = _strlen(s2) - 1; len2 >= 0; len2--)
 		{
 			digit2 = s2[len2] - '0';
-			carry += result[len1 + len2 + 1] + (digit1 + digit2);
+			carry += result[len1 + len2 + 1] + (digit1 * digit2);
 			result[len1 + len2 + 1] = carry % 10;
 			carry /= 10;
 		}
