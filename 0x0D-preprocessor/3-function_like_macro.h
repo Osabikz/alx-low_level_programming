@@ -1,12 +1,6 @@
-#include <stdio.h>
+#ifndef FUNCTION_LIKE_MACRO_H
+#define FUNCTION_LIKE_MACRO_H
 
-/**
- * main - print the name of file
- * Returm: 0
- */
+#define ABS(x) ((x) < (0) ? -(x) : (x))
 
-int main(void)
-{
-	printf("%s\n", __FILE__);
-	return (0);
-}
+#endif
