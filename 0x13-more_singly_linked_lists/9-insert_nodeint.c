@@ -25,7 +25,7 @@ listint_t *create_new_node(int n)
  * @head: the pointer that address the head
  * @idx: index to the position of the node
  * @n: the interger to the node
- * Return: NULL
+ * Return: the address of the newly created node
  */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
