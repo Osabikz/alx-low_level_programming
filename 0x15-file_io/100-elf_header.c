@@ -14,7 +14,6 @@ void print_data(unsigned char *e_ident);
 void print_class(unsigned char *e_ident);
 void print_magic(unsigned char *e_ident);
 void check_elf(unsigned char *e_ident);
-int main(int __attribute__((__unused__)) argc, char *argv[]);
 
 /**
  * check_elf - checks if the file ia an ELF file
