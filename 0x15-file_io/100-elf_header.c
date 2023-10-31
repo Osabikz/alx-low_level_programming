@@ -1,4 +1,4 @@
-#include "main.h"
+#include <fcntl.h>
 #include <elf.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -48,7 +48,7 @@ void print_magic(unsigned char *e_ident)
 {
 	int index;
 
-	printf (" Magic: ");
+	printf(" Magic: ");
 
 	for (index = 0; index < EI_NIDENT; index++)
 	{
