@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+
 void close_elf(int elf);
 void print_entry(unsigned long int e_entry, unsigned char *e_ident);
 void print_type(unsigned int e_type, unsigned char *e_ident);
@@ -150,7 +151,7 @@ void print_osabi(unsigned char *e_ident)
 		printf("UNIX - HP-UX\n");
 		break;
 	case ELFOSABI_NETBSD:
-		printf("UNIX - NETBSD\n");
+		printf("UNIX - NeTBSD\n");
 		break;
 	case ELFOSABI_LINUX:
 		printf("UNIX - Linux\n");
@@ -162,7 +163,7 @@ void print_osabi(unsigned char *e_ident)
 		printf("UNIX - IRIX\n");
 		break;
 	case ELFOSABI_FREEBSD:
-		printf("UNIX - FREEBSD\n");
+		printf("UNIX - FreeBSD\n");
 		break;
 	case ELFOSABI_TRU64:
 		printf("UNIX - TRU64\n");
