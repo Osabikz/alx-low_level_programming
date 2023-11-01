@@ -27,7 +27,6 @@ void *error_file(int file_from, int file_to, char *argv[])
 		exit(99);
 	}
 
-	return (0);
 }
 
 /**
