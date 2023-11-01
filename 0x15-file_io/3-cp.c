@@ -26,7 +26,7 @@ void *error_file(int file_from, int file_to, char *argv[])
 		dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
 		exit(99);
 	}
-
+	return (0);
 }
 
 /**
@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
 {
 	int file_from, file_to, err_close;
 	ssize_t nchars, nwr;
-	char buff[1024];
+	char buf[1024];
 
 	if (argc != 3)
 	{
@@ -54,26 +54,28 @@ int main(int argc, char *argv[])
 
 	nchars = 1024;
 	while (nchars == 1024)
-
 	{
-		nchars = read(file_from, buff, 1024);
+		nchars = read(file_from, buf, 1024);
 		if (nchars == -1)
 			error_file(-1, 0, argv);
-		nwr = write(file_to, buff, nchars);
+		nwr = write(file_to, buf, nchars);
 			if (nwr == -1)
 			error_file(0, -1, argv);
 	}
+
 	err_close = close(file_from);
 	if (err_close == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: can't read close fd %d\n", file_from);
 		exit(100);
 	}
+
 	err_close = close(file_to);
 	if (err_close == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: can't read close fd %d\n", file_to);
 		exit(100);
 	}
+
 	return (0);
 }
