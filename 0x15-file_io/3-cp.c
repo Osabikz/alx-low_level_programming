@@ -2,22 +2,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char *error_file(int file_from, int file_to, char *argv[]);
+int main(int argc, char *argv[]);
+void *error_file(int file_from, int file_to, char *argv[]);
 
 /**
- * error_file - checks if the file is opened and handle errors
+ * error_file - checks if a file is opened and handle errors
  * @file_to: destination file
  * @file_from: initial file to copy
  * @argv: argument parameter
  * Return: no return
  */
 
-char *error_file(int file_from, int file_to, char *argv[])
+void *error_file(int file_from, int file_to, char *argv[])
 {
 
 	if (file_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: can't read from %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: can't read from file %s\n", argv[1]);
 		exit(98);
 	}
 	if (file_to == -1)
@@ -25,7 +26,7 @@ char *error_file(int file_from, int file_to, char *argv[])
 		dprintf(STDERR_FILENO, "Error: can't write to %s\n", argv[2]);
 		exit(99);
 	}
-
+	return (0);
 }
 
 /**
