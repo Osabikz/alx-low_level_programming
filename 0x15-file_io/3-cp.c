@@ -34,6 +34,7 @@ void *error_file(int file_from, int file_to, char *argv[])
  * @argc: the number of arguments
  * @argv: the array of pointers
  * Return: 0
+ * Description: if file_to or file_from cannot be closed - exit code 100
  */
 
 int main(int argc, char *argv[])
